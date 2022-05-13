@@ -1,0 +1,16 @@
+[Unit]
+Description=Theia service
+After=syslog.target network.target
+
+[Service]
+Type=simple
+User=%i
+WorkingDirectory=/opt/theia
+ExecStart=/opt/theia/bin/theia
+Restart=on-failure
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=theia
+
+[Install]
+WantedBy=multi-user.target
