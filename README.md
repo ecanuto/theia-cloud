@@ -32,7 +32,7 @@ yarn setup
 Install systemd service:
 
 ```sh
-sudo ln -s /opt/theia/lib/theia@.service /etc/systemd/system/theia@.service
+ln -s /opt/theia/lib/theia@.service /etc/systemd/system/theia@.service
 
 systemctl daemon-reload
 systemctl enable theia@$USER
