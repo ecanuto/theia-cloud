@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+/usr/bin/node /opt/theia/node_modules/.bin/theia start \
+	--plugins=local-dir:plugins \
+	--hostname=127.0.0.1 \
+	--port=3001
