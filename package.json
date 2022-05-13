@@ -1,0 +1,91 @@
+{
+    "private": true,
+    "name": "@theia/ide",
+    "version": "1.25.0",
+    "engines": {
+        "yarn": ">=1.7.0 <2",
+        "node": ">=12.14.1"
+    },
+    "theia": {
+        "frontend": {
+            "config": {
+                "applicationName": "Theia Cloud IDE",
+                "defaultTheme": "dark",
+                "preferences": {
+                    "files.enableTrash": false,
+                    "ruby.useLanguageServer": true,
+                    "php.suggest.basic": false
+                }
+            }
+        }
+    },
+    "dependencies": {
+        "@theia/bulk-edit": "1.25.0",
+        "@theia/callhierarchy": "1.25.0",
+        "@theia/console": "1.25.0",
+        "@theia/core": "1.25.0",
+        "@theia/debug": "1.25.0",
+        "@theia/editor": "1.25.0",
+        "@theia/editor-preview": "1.25.0",
+        "@theia/file-search": "1.25.0",
+        "@theia/filesystem": "1.25.0",
+        "@theia/getting-started": "1.25.0",
+        "@theia/git": "1.25.0",
+        "@theia/keymaps": "1.25.0",
+        "@theia/markers": "1.25.0",
+        "@theia/messages": "1.25.0",
+        "@theia/metrics": "1.25.0",
+        "@theia/mini-browser": "1.25.0",
+        "@theia/monaco": "1.25.0",
+        "@theia/navigator": "1.25.0",
+        "@theia/outline-view": "1.25.0",
+        "@theia/output": "1.25.0",
+        "@theia/plugin-dev": "1.25.0",
+        "@theia/plugin-ext": "1.25.0",
+        "@theia/plugin-ext-vscode": "1.25.0",
+        "@theia/plugin-metrics": "1.25.0",
+        "@theia/preferences": "1.25.0",
+        "@theia/preview": "1.25.0",
+        "@theia/process": "1.25.0",
+        "@theia/property-view": "1.25.0",
+        "@theia/scm": "1.25.0",
+        "@theia/scm-extra": "1.25.0",
+        "@theia/search-in-workspace": "1.25.0",
+        "@theia/task": "1.25.0",
+        "@theia/terminal": "1.25.0",
+        "@theia/timeline": "1.25.0",
+        "@theia/toolbar": "1.25.0",
+        "@theia/typehierarchy": "1.25.0",
+        "@theia/userstorage": "1.25.0",
+        "@theia/variable-resolver": "1.25.0",
+        "@theia/vsx-registry": "1.25.0",
+        "@theia/workspace": "1.25.0"
+    },
+    "devDependencies": {
+        "@theia/cli": "1.25.0"
+    },
+    "scripts": {
+        "download:plugins": "theia download:plugins",
+        "build": "theia build",
+        "clean": "theia clean",
+        "start": "theia start --plugins=local-dir:plugins",
+        "setup": "yarn install && yarn download:plugins && yarn build"
+    },
+    "theiaPluginsDir": "plugins",
+    "theiaPlugins": {
+        "vscode-builtin-extensions-pack": "https://open-vsx.org/api/eclipse-theia/builtin-extension-pack/1.50.1/file/eclipse-theia.builtin-extension-pack-1.50.1.vsix",
+        "vscode-editorconfig": "https://open-vsx.org/api/EditorConfig/EditorConfig/0.14.4/file/EditorConfig.EditorConfig-0.14.4.vsix",
+        "vscode-eslint": "https://open-vsx.org/api/dbaeumer/vscode-eslint/2.1.1/file/dbaeumer.vscode-eslint-2.1.1.vsix",
+        "vscode-references-view": "https://open-vsx.org/api/ms-vscode/references-view/0.0.89/file/ms-vscode.references-view-0.0.89.vsix",
+
+        "vscode.theme-defaults": "https://open-vsx.org/api/vscode/theme-defaults/1.62.3/file/vscode.theme-defaults-1.62.3.vsix"
+    },
+    "theiaPluginsExcludeIds": [
+        "vscode.extension-editing",
+        "vscode.git",
+        "vscode.git-ui",
+        "vscode.github",
+        "vscode.github-authentication",
+        "vscode.microsoft-authentication"
+    ]
+}
